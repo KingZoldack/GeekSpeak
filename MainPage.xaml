@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeekSpeak.MainPage">
+
+    <Grid BackgroundColor="Aqua">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStopCollection>
+                    <GradientStop x:Name="gstop1" Offset="0" Color="Blue"/>
+                    <GradientStop x:Name="gstop2" Offset=".25" Color="LightBlue"/>
+                    <GradientStop x:Name="gstop3" Offset=".5" Color="Teal"/>
+                    <GradientStop x:Name="gstop4" Offset=".75" Color="LightGreen"/>
+                    <GradientStop x:Name="gstop5" Offset="1" Color="Green"/>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".8*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+                <Label 
+                    x:Name="lblQuotes"
+                    Grid.Row="0"
+					Text="&quot;The computer was born to solve problems that did not exist before.&quot; - Bill Gates"
+                    FontSize="Large"
+                    FontFamily="Yasmen"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Button 
+                    x:Name="btnGenerate"
+                    Clicked="btnGenerate_Clicked"
+                    Grid.Row="1"
+                    Text="Generate Quote"
+                    Background="MediumPurple"
+                    TextColor="White"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    FontSize="25"
+                    HeightRequest="50"/>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
